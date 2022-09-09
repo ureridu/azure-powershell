@@ -15,7 +15,7 @@ Updates a configuration profile
 ### UpdateExpanded (Default)
 ```
 Update-AzAutomanageConfigurationProfile -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-Configuration <IAny>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+ [-Configuration <Hashtable>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -35,7 +35,7 @@ Update-AzAutomanageConfigurationProfile -InputObject <IAutomanageIdentity>
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzAutomanageConfigurationProfile -InputObject <IAutomanageIdentity> [-Configuration <IAny>]
+Update-AzAutomanageConfigurationProfile -InputObject <IAutomanageIdentity> [-Configuration <Hashtable>]
  [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -72,7 +72,7 @@ Updates a configuration profile
 configuration dictionary of the configuration profile.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.IAny
+Type: System.Collections.Hashtable
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
 
@@ -260,7 +260,8 @@ To create the parameters described below, construct a hash table containing the 
 `PARAMETER <IConfigurationProfileUpdate>`: Definition of the configuration profile.
   - `[Tag <IUpdateResourceTags>]`: The tags of the resource.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
-  - `[Configuration <IAny>]`: configuration dictionary of the configuration profile.
+  - `[Configuration <IConfigurationDictionary>]`: configuration dictionary of the configuration profile.
+    - `[(Any) <Object>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
 

@@ -14,7 +14,7 @@ Delete a configuration profile assignment
 
 ### Delete (Default)
 ```
-Remove-AzAutomanageConfigurationProfileAssignment -Name <String> -ResourceGroupName <String> -VMName <String>
+Remove-AzAutomanageConfigurationProfileAssignment -ResourceGroupName <String> -VMName <String>
  [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -81,21 +81,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Name of the configuration profile assignment
-
-```yaml
-Type: System.String
-Parameter Sets: Delete
-Aliases: ConfigurationProfileAssignmentName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

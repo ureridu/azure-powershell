@@ -1,32 +1,31 @@
 ---
 external help file:
 Module Name: Az.Automanage
-online version: https://docs.microsoft.com/powershell/module/az.automanage/remove-azautomanageconfigurationprofilesversion
+online version: https://docs.microsoft.com/powershell/module/az.automanage/get-azautomanageconfigurationprofileversion
 schema: 2.0.0
 ---
 
-# Remove-AzAutomanageConfigurationProfilesVersion
+# Get-AzAutomanageConfigurationProfileVersion
 
 ## SYNOPSIS
-Delete a configuration profile version
+Get information about a configuration profile version
 
 ## SYNTAX
 
-### Delete (Default)
+### Get (Default)
 ```
-Remove-AzAutomanageConfigurationProfilesVersion -ConfigurationProfileName <String> -ResourceGroupName <String>
- -VersionName <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Get-AzAutomanageConfigurationProfileVersion -ConfigurationProfileName <String> -ResourceGroupName <String>
+ -VersionName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
-### DeleteViaIdentity
+### GetViaIdentity
 ```
-Remove-AzAutomanageConfigurationProfilesVersion -InputObject <IAutomanageIdentity>
- [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Get-AzAutomanageConfigurationProfileVersion -InputObject <IAutomanageIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a configuration profile version
+Get information about a configuration profile version
 
 ## EXAMPLES
 
@@ -55,11 +54,11 @@ Delete a configuration profile version
 ## PARAMETERS
 
 ### -ConfigurationProfileName
-Name of the configuration profile
+The configuration profile name.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Get
 Aliases:
 
 Required: True
@@ -90,7 +89,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.IAutomanageIdentity
-Parameter Sets: DeleteViaIdentity
+Parameter Sets: GetViaIdentity
 Aliases:
 
 Required: True
@@ -100,28 +99,13 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Returns true when the command succeeds
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 The name of the resource group.
 The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Get
 Aliases:
 
 Required: True
@@ -135,8 +119,8 @@ Accept wildcard characters: False
 The ID of the target subscription.
 
 ```yaml
-Type: System.String
-Parameter Sets: Delete
+Type: System.String[]
+Parameter Sets: Get
 Aliases:
 
 Required: False
@@ -151,41 +135,10 @@ The configuration profile version name.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Get
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -201,7 +154,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Boolean
+### Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.Api20220504.IConfigurationProfile
 
 ## NOTES
 

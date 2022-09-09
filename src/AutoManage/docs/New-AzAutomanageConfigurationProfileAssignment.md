@@ -14,14 +14,14 @@ Creates an association between a VM and Automanage configuration profile
 
 ### CreateExpanded (Default)
 ```
-New-AzAutomanageConfigurationProfileAssignment -Name <String> -ResourceGroupName <String> -VMName <String>
+New-AzAutomanageConfigurationProfileAssignment -ResourceGroupName <String> -VMName <String>
  [-SubscriptionId <String>] [-ConfigurationProfile <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-AzAutomanageConfigurationProfileAssignment -Name <String> -ResourceGroupName <String> -VMName <String>
+New-AzAutomanageConfigurationProfileAssignment -ResourceGroupName <String> -VMName <String>
  -Parameter <IConfigurationProfileAssignment> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -111,22 +111,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Name of the configuration profile assignment.
-Only default is supported.
-
-```yaml
-Type: System.String
-Parameter Sets: Create, CreateExpanded
-Aliases: ConfigurationProfileAssignmentName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

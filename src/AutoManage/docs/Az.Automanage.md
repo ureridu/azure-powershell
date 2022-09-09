@@ -32,7 +32,7 @@ Get information about a configuration profile assignment
 ### [Get-AzAutomanageConfigurationProfileHcrpAssignment](Get-AzAutomanageConfigurationProfileHcrpAssignment.md)
 Get information about a configuration profile assignment
 
-### [Get-AzAutomanageConfigurationProfilesVersion](Get-AzAutomanageConfigurationProfilesVersion.md)
+### [Get-AzAutomanageConfigurationProfileVersion](Get-AzAutomanageConfigurationProfileVersion.md)
 Get information about a configuration profile version
 
 ### [Get-AzAutomanageConfigurationProfileVersionChildResource](Get-AzAutomanageConfigurationProfileVersionChildResource.md)
@@ -77,7 +77,7 @@ Delete a configuration profile assignment
 ### [Remove-AzAutomanageConfigurationProfileHcrpAssignment](Remove-AzAutomanageConfigurationProfileHcrpAssignment.md)
 Delete a configuration profile assignment
 
-### [Remove-AzAutomanageConfigurationProfilesVersion](Remove-AzAutomanageConfigurationProfilesVersion.md)
+### [Remove-AzAutomanageConfigurationProfileVersion](Remove-AzAutomanageConfigurationProfileVersion.md)
 Delete a configuration profile version
 
 ### [Set-AzAutomanageConfigurationProfile](Set-AzAutomanageConfigurationProfile.md)

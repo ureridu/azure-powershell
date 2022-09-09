@@ -14,14 +14,14 @@ Creates an association between a VM and Automanage configuration profile
 
 ### UpdateExpanded (Default)
 ```
-Set-AzAutomanageConfigurationProfileAssignment -Name <String> -ResourceGroupName <String> -VMName <String>
+Set-AzAutomanageConfigurationProfileAssignment -ResourceGroupName <String> -VMName <String>
  [-SubscriptionId <String>] [-ConfigurationProfile <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Update
 ```
-Set-AzAutomanageConfigurationProfileAssignment -Name <String> -ResourceGroupName <String> -VMName <String>
+Set-AzAutomanageConfigurationProfileAssignment -ResourceGroupName <String> -VMName <String>
  -Parameter <IConfigurationProfileAssignment> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -79,22 +79,6 @@ Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Name of the configuration profile assignment.
-Only default is supported.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: ConfigurationProfileAssignmentName
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

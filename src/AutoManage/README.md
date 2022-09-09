@@ -44,4 +44,41 @@ inlining-threshold: 100
 resourcegroup-append: true
 nested-object-to-string: true
 
+directive:
+  - from: swagger-document
+    where: $.definitions.ConfigurationDictionary
+    transform: >-
+      return {
+          "description": "The custom configuration for configuration profile. Name and value pairs that define the configuration details of the configuration profile.",
+          "type": "object",
+          "additionalProperties": true,
+          "example": {
+            "Antimalware/Enable": true
+          }
+      }
+  - where:
+      subject: (.*)(Profiles)(.*)
+    set:
+      subject: $1Profile$3
+
+  # Set default value for parameter
+  - where:
+      subject: ConfigurationProfileAssignment
+      parameter-name: Name
+    hide: true
+    set:
+      default:
+        script: "'default'"
+
+  - where:
+      model-name: ConfigurationProfileAssignment
+    set:
+      format-table:
+        properties:
+          - Name
+          - ResourceGroupName
+          - ManagedBy
+          - Status
+          - TargetId
+
 ```

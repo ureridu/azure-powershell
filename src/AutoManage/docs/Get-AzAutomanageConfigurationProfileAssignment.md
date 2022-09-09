@@ -20,7 +20,7 @@ Get-AzAutomanageConfigurationProfileAssignment [-SubscriptionId <String[]>] [-De
 
 ### Get
 ```
-Get-AzAutomanageConfigurationProfileAssignment -Name <String> -ResourceGroupName <String> -VMName <String>
+Get-AzAutomanageConfigurationProfileAssignment -ResourceGroupName <String> -VMName <String>
  [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -136,21 +136,6 @@ The name of the Arc machine.
 Type: System.String
 Parameter Sets: List3
 Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The configuration profile assignment name.
-
-```yaml
-Type: System.String
-Parameter Sets: Get
-Aliases: ConfigurationProfileAssignmentName
 
 Required: True
 Position: Named

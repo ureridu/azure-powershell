@@ -15,8 +15,8 @@ Creates a configuration profile
 ### UpdateExpanded (Default)
 ```
 Set-AzAutomanageConfigurationProfile -Name <String> -ResourceGroupName <String> -Location <String>
- [-SubscriptionId <String>] [-Configuration <IAny>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-SubscriptionId <String>] [-Configuration <Hashtable>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
+ [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Update
@@ -59,7 +59,7 @@ Creates a configuration profile
 configuration dictionary of the configuration profile.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.IAny
+Type: System.Collections.Hashtable
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -232,7 +232,8 @@ To create the parameters described below, construct a hash table containing the 
   - `Location <String>`: The geo-location where the resource lives
   - `[Tag <ITrackedResourceTags>]`: Resource tags.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
-  - `[Configuration <IAny>]`: configuration dictionary of the configuration profile.
+  - `[Configuration <IConfigurationDictionary>]`: configuration dictionary of the configuration profile.
+    - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[SystemDataCreatedAt <DateTime?>]`: The timestamp of resource creation (UTC).
   - `[SystemDataCreatedBy <String>]`: The identity that created the resource.
   - `[SystemDataCreatedByType <CreatedByType?>]`: The type of identity that created the resource.
