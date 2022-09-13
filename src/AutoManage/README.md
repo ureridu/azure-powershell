@@ -56,10 +56,54 @@ directive:
             "Antimalware/Enable": true
           }
       }
+
   - where:
       subject: (.*)(Profiles)(.*)
     set:
       subject: $1Profile$3
+
+  # rename parameter
+  - where:
+      subject: BestPracticesVersion
+      parameter-name: BestPracticeName
+    set:
+      parameter-name: Name
+
+  - where:
+      subject: BestPracticesVersion
+      parameter-name: VersionName
+    set:
+      parameter-name: Version
+
+  - where:
+      subject: ConfigurationProfileVersionChildResource|ConfigurationProfileVersion
+      parameter-name: ConfigurationProfileName
+    set:
+      parameter-name: Name
+
+  - where:
+      subject: Report
+      parameter-name: ConfigurationProfileName
+    set:
+      parameter-name: Name
+
+  - where:
+      subject: ConfigurationProfileVersion|ConfigurationProfileHciAssignment|ConfigurationProfileHcrpAssignment
+      parameter-name: ConfigurationProfileAssignmentName
+    set:
+      parameter-name: Name
+
+  - where:
+      subject: HciReport|HcrpReport
+      parameter-name: ReportName
+    set:
+      parameter-name: Name
+
+  - where:
+      subject: ConfigurationProfileVersion
+      parameter-name: VersionName
+    set:
+      parameter-name: Version
 
   # Set default value for parameter
   - where:

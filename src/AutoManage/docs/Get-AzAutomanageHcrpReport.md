@@ -20,9 +20,8 @@ Get-AzAutomanageHcrpReport -ConfigurationProfileAssignmentName <String> -Machine
 
 ### Get
 ```
-Get-AzAutomanageHcrpReport -ConfigurationProfileAssignmentName <String> -MachineName <String>
- -ReportName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
+Get-AzAutomanageHcrpReport -ConfigurationProfileAssignmentName <String> -MachineName <String> -Name <String>
+ -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -121,7 +120,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReportName
+### -Name
 The report name.
 
 ```yaml

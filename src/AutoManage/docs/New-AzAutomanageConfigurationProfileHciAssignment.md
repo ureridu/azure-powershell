@@ -14,17 +14,16 @@ Creates an association between a AzureStackHCI cluster and Automanage configurat
 
 ### CreateExpanded (Default)
 ```
-New-AzAutomanageConfigurationProfileHciAssignment -ClusterName <String>
- -ConfigurationProfileAssignmentName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-ConfigurationProfile <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+New-AzAutomanageConfigurationProfileHciAssignment -ClusterName <String> -Name <String>
+ -ResourceGroupName <String> [-SubscriptionId <String>] [-ConfigurationProfile <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-AzAutomanageConfigurationProfileHciAssignment -ClusterName <String>
- -ConfigurationProfileAssignmentName <String> -ResourceGroupName <String>
- -Parameter <IConfigurationProfileAssignment> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+New-AzAutomanageConfigurationProfileHciAssignment -ClusterName <String> -Name <String>
+ -ResourceGroupName <String> -Parameter <IConfigurationProfileAssignment> [-SubscriptionId <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### CreateViaIdentity
@@ -99,22 +98,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConfigurationProfileAssignmentName
-Name of the configuration profile assignment.
-Only default is supported.
-
-```yaml
-Type: System.String
-Parameter Sets: Create, CreateExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -143,6 +126,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Name of the configuration profile assignment.
+Only default is supported.
+
+```yaml
+Type: System.String
+Parameter Sets: Create, CreateExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

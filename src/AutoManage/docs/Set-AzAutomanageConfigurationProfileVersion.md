@@ -14,16 +14,16 @@ Creates a configuration profile version
 
 ### UpdateExpanded (Default)
 ```
-Set-AzAutomanageConfigurationProfileVersion -ConfigurationProfileName <String> -ResourceGroupName <String>
- -VersionName <String> -Location <String> [-SubscriptionId <String>] [-Configuration <Hashtable>]
- [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-AzAutomanageConfigurationProfileVersion -Name <String> -ResourceGroupName <String> -Version <String>
+ -Location <String> [-SubscriptionId <String>] [-Configuration <Hashtable>] [-Tag <Hashtable>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Update
 ```
-Set-AzAutomanageConfigurationProfileVersion -ConfigurationProfileName <String> -ResourceGroupName <String>
- -VersionName <String> -Parameter <IConfigurationProfile> [-SubscriptionId <String>]
- [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-AzAutomanageConfigurationProfileVersion -Name <String> -ResourceGroupName <String> -Version <String>
+ -Parameter <IConfigurationProfile> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,21 +70,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConfigurationProfileName
-Name of the configuration profile.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -106,6 +91,21 @@ The geo-location where the resource lives
 ```yaml
 Type: System.String
 Parameter Sets: UpdateExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Name of the configuration profile.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -177,7 +177,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VersionName
+### -Version
 The configuration profile version name.
 
 ```yaml

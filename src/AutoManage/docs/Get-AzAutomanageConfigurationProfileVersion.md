@@ -14,8 +14,8 @@ Get information about a configuration profile version
 
 ### Get (Default)
 ```
-Get-AzAutomanageConfigurationProfileVersion -ConfigurationProfileName <String> -ResourceGroupName <String>
- -VersionName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzAutomanageConfigurationProfileVersion -Name <String> -ResourceGroupName <String> -Version <String>
+ [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -53,21 +53,6 @@ Get information about a configuration profile version
 
 ## PARAMETERS
 
-### -ConfigurationProfileName
-The configuration profile name.
-
-```yaml
-Type: System.String
-Parameter Sets: Get
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -96,6 +81,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+The configuration profile name.
+
+```yaml
+Type: System.String
+Parameter Sets: Get
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -130,7 +130,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VersionName
+### -Version
 The configuration profile version name.
 
 ```yaml

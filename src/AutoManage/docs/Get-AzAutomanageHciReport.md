@@ -20,9 +20,8 @@ Get-AzAutomanageHciReport -ClusterName <String> -ConfigurationProfileAssignmentN
 
 ### Get
 ```
-Get-AzAutomanageHciReport -ClusterName <String> -ConfigurationProfileAssignmentName <String>
- -ReportName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
+Get-AzAutomanageHciReport -ClusterName <String> -ConfigurationProfileAssignmentName <String> -Name <String>
+ -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -120,7 +119,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ReportName
+### -Name
 The report name.
 
 ```yaml

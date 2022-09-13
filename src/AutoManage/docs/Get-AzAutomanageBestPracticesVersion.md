@@ -14,8 +14,8 @@ Get information about a Automanage best practice version
 
 ### Get (Default)
 ```
-Get-AzAutomanageBestPracticesVersion -BestPracticeName <String> -VersionName <String>
- [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzAutomanageBestPracticesVersion -Name <String> -Version <String> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -53,21 +53,6 @@ Get information about a Automanage best practice version
 
 ## PARAMETERS
 
-### -BestPracticeName
-The Automanage best practice name.
-
-```yaml
-Type: System.String
-Parameter Sets: Get
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -99,7 +84,22 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -VersionName
+### -Name
+The Automanage best practice name.
+
+```yaml
+Type: System.String
+Parameter Sets: Get
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Version
 The Automanage best practice version name.
 
 ```yaml

@@ -14,9 +14,8 @@ Delete a configuration profile version
 
 ### Delete (Default)
 ```
-Remove-AzAutomanageConfigurationProfileVersion -ConfigurationProfileName <String> -ResourceGroupName <String>
- -VersionName <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Remove-AzAutomanageConfigurationProfileVersion -Name <String> -ResourceGroupName <String> -Version <String>
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### DeleteViaIdentity
@@ -54,21 +53,6 @@ Delete a configuration profile version
 
 ## PARAMETERS
 
-### -ConfigurationProfileName
-Name of the configuration profile
-
-```yaml
-Type: System.String
-Parameter Sets: Delete
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -97,6 +81,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Name of the configuration profile
+
+```yaml
+Type: System.String
+Parameter Sets: Delete
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -146,7 +145,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VersionName
+### -Version
 The configuration profile version name.
 
 ```yaml

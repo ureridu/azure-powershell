@@ -14,9 +14,9 @@ Delete a configuration profile assignment
 
 ### Delete (Default)
 ```
-Remove-AzAutomanageConfigurationProfileHcrpAssignment -ConfigurationProfileAssignmentName <String>
- -MachineName <String> -ResourceGroupName <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
- [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-AzAutomanageConfigurationProfileHcrpAssignment -MachineName <String> -Name <String>
+ -ResourceGroupName <String> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### DeleteViaIdentity
@@ -54,21 +54,6 @@ Delete a configuration profile assignment
 
 ## PARAMETERS
 
-### -ConfigurationProfileAssignmentName
-Name of the configuration profile assignment
-
-```yaml
-Type: System.String
-Parameter Sets: Delete
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -102,6 +87,21 @@ Accept wildcard characters: False
 
 ### -MachineName
 The name of the Arc machine.
+
+```yaml
+Type: System.String
+Parameter Sets: Delete
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Name of the configuration profile assignment
 
 ```yaml
 Type: System.String
