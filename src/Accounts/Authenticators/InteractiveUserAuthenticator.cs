@@ -59,7 +59,7 @@ namespace Microsoft.Azure.PowerShell.Authenticators
             var requestContext = new TokenRequestContext(scopes);
             var authority = interactiveParameters.Environment.ActiveDirectoryAuthority;
 
-            var options = new InteractiveBrowserCredentialBrokerOptions(GetConsoleWindow())
+            var options = new InteractiveBrowserCredentialBrokerOptions(SafeGetConsoleWindow())
             {
                 ClientId = clientId,
                 TenantId = tenantId,
@@ -104,6 +104,18 @@ namespace Microsoft.Azure.PowerShell.Authenticators
             }
 
             return psWindowHandle;
+        }
+
+        static IntPtr SafeGetConsoleWindow()
+        {
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                return GetConsoleWindow();
+            }
+            else
+            {
+                return (IntPtr)0;
+            }
         }
 
         [DllImport("kernel32.dll")]
